@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Add from "../src/organisms/tsStart/index";
+import Add from "@/organisms/tsStart/";
 import UnionAdd from "@/organisms/unionTypes";
 import LiteralAdd from "@/organisms/literalTypes";
 
