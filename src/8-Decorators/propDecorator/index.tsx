@@ -1,5 +1,7 @@
 import React from "react";
 
+// where to place decorators
+
 const PropDecorators = () => {
 	// if you add a decorator to a propertie, the decorator gets two arguments
 	const Log = (target: any, name: string | Symbol) => {
