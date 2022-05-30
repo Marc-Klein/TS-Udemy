@@ -13,11 +13,7 @@ const Add = () => {
 	const resultPhrase = "Result is: ";
 	add(number1, number2, printResult, resultPhrase);
 
-	return (
-		<p>
-			{resultPhrase} {printResult}
-		</p>
-	);
+	return <p>Typescript start</p>;
 };
 
 export default Add;
