@@ -1,12 +1,14 @@
 import type { NextPage } from "next";
 import Add from "../src/organisms/tsStart/index";
-import CombinedAdd from "../src/organisms/unionTypes";
+import UnionAdd from "@/organisms/unionTypes";
+import LiteralAdd from "@/organisms/literalTypes";
 
 const Home: NextPage = () => {
 	return (
 		<>
 			<Add />
-			<CombinedAdd />
+			<UnionAdd />
+			<LiteralAdd />
 		</>
 	);
 };
