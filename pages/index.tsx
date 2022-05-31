@@ -3,6 +3,7 @@ import Add from "@/organisms/tsStart/";
 import UnionAdd from "@/organisms/unionTypes";
 import LiteralAdd from "@/organisms/literalTypes";
 import FuncTypes from "@/organisms/functionTypes";
+import NeverType from "@/organisms/neverType";
 
 const Home: NextPage = () => {
 	return (
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
 			<UnionAdd />
 			<LiteralAdd />
 			<FuncTypes />
+			<NeverType />
 		</>
 	);
 };
