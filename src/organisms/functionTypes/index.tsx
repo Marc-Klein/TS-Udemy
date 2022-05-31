@@ -22,6 +22,16 @@ const FuncTypes = () => {
 	addValues = add3;
 	console.log(addValues(2, 5));
 
+	// callbacks also have types
+	const addWithCallback = (num1: number, num2: number, callBack: (num: number) => void) => {
+		const result = num1 + num2;
+		callBack(result);
+	};
+	addWithCallback(2, 6, result => {
+		console.log(result);
+		return result;
+	});
+
 	return (
 		<>
 			<p>FuncTypes</p>
