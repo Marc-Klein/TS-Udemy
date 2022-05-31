@@ -1,5 +1,7 @@
 import React from "react";
 
+// https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#defining-a-union-type
+
 const UnionAdd = () => {
 	const combine = (input1: number | string, input2: number | string) => {
 		let result;
