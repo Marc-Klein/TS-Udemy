@@ -1,8 +1,9 @@
 import React from "react";
 
-const CombineAdd = () => {
+const UnionAdd = () => {
 	const combine = (input1: number | string, input2: number | string) => {
 		let result;
+		// workaround for TS checking for the types of the arr
 		if (typeof input1 === "number" && typeof input2 === "number") {
 			result = input1 + input2;
 		} else {
@@ -20,4 +21,4 @@ const CombineAdd = () => {
 	return <p>Combined Add</p>;
 };
 
-export default CombineAdd;
+export default UnionAdd;
