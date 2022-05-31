@@ -18,9 +18,9 @@ const FuncTypes = () => {
 	};
 
 	// define what to store in a variable
-	let addValues: Function;
-	addValues = add;
-	console.log(addValues);
+	let addValues: (a: number, b: number) => number;
+	addValues = add3;
+	console.log(addValues(2, 5));
 
 	return (
 		<>
