@@ -3,6 +3,9 @@ import React from "react";
 
 const LiteralAdd = () => {
 	// literals with type aliases
+	// https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-aliases
+	// https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-types
+
 	type Combinable = number | string;
 	type ConversionDescription = "as-number" | "as-text";
 
