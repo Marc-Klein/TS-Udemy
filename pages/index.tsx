@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 			<UnionAdd />
 			<LiteralAdd />
 			<FuncTypes />
-			<NeverType />
+			{/* <NeverType /> */}
 			<FirstClass />
 		</>
 	);
