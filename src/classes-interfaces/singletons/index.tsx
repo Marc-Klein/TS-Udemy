@@ -1,18 +1,10 @@
-import { handleClientScriptLoad } from "next/script";
 import React from "react";
 
-const Statics = () => {
-	// abstract classes cant be instantiated, its only for inherriting
-	abstract class Department {
-		// props
-		static fiscalYear = 2020;
+const GetterSetter = () => {
+	class Department {
 		protected employees: string[] = [];
 
 		constructor(protected readonly id: string, public name: string) {}
-
-		static createEmployee(name: string) {
-			return { name: name };
-		}
 
 		addEmployee(employee: string) {
 			this.employees.push(employee);
@@ -22,12 +14,12 @@ const Statics = () => {
 			console.log(this.employees.length);
 			console.log(this.employees);
 		}
-
-		abstract describe(this: Department): void;
 	}
 
 	class AccountingDepartment extends Department {
 		private lastReport: string;
+		// it is possible to an Instance in a prop
+		private static instance: AccountingDepartment;
 
 		get mostRecentReport() {
 			if (this.lastReport) {
@@ -44,9 +36,8 @@ const Statics = () => {
 			this.addReport(value);
 		}
 
-		constructor(id: string, private reports: string[]) {
+		private constructor(id: string, private reports: string[]) {
 			super(id, "Accounting");
-
 			this.lastReport = reports[0];
 		}
 
@@ -64,19 +55,23 @@ const Statics = () => {
 			this.employees.push(name);
 		}
 
-		describe() {
-			console.log("Accounting Department goes brr.." + this.id);
+		static getInstance() {
+			// is a instance there
+			if (this.instance) {
+				return this.instance;
+			} else {
+				this.instance = new AccountingDepartment("D2", []);
+				return this.instance;
+			}
 		}
 	}
-
-	// with static Methods you dont have to instantiating a class with keyword "new"
-	// you can call it directly on the class it self
-	const employee1 = Department.createEmployee("Max");
-	console.log(employee1, Department.fiscalYear);
-
-	const accounting = new AccountingDepartment("D2", []);
+	const accounting = AccountingDepartment.getInstance();
+	accounting.mostRecentReport = "Hello";
+	accounting.addReport("somethings odd");
+	console.log(accounting.mostRecentReport);
+	accounting.printReports();
 
 	return <></>;
 };
 
-export default Statics;
+export default GetterSetter;

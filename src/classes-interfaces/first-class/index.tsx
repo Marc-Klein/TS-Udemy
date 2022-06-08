@@ -10,7 +10,8 @@ const FirstClass = () => {
 
 		// constructor runs initalizing code
 		// readonly at this point makes sure that the prop is only initalized ones
-		constructor(private readonly id: string, public name: string) {
+		// "protected" makes sure that we  cam use "id" in every class that extends "Department"
+		constructor(protected readonly id: string, public name: string) {
 			// this.name = n;
 		}
 

@@ -4,7 +4,7 @@ const GetterSetter = () => {
 	class Department {
 		protected employees: string[] = [];
 
-		constructor(private readonly id: string, public name: string) {}
+		constructor(protected readonly id: string, public name: string) {}
 
 		addEmployee(employee: string) {
 			this.employees.push(employee);
