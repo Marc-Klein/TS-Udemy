@@ -1,5 +1,10 @@
 import React from "react";
 
+// this example makes use of the singleton pattern,
+// with the singleton pattern you can instantiate a class only once
+// here with the accounting Department
+// it makes use of private constructors
+
 const GetterSetter = () => {
 	class Department {
 		protected employees: string[] = [];
@@ -56,9 +61,11 @@ const GetterSetter = () => {
 		}
 
 		static getInstance() {
-			// is a instance there
+			// is a instance there return the instance
 			if (this.instance) {
 				return this.instance;
+				// AccountingDepmaretment can here instantiated because were inside of the class
+				// remember, because the constructor is private it can only be accessed from inside the class
 			} else {
 				this.instance = new AccountingDepartment("D2", []);
 				return this.instance;
