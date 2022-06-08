@@ -1,10 +1,16 @@
 import React from "react";
 
-const GetterSetter = () => {
+const Statics = () => {
 	class Department {
+		// props
+		static fiscalYear = 2020;
 		protected employees: string[] = [];
 
 		constructor(private readonly id: string, public name: string) {}
+
+		static createEmployee(name: string) {
+			return { name: name };
+		}
 
 		addEmployee(employee: string) {
 			this.employees.push(employee);
@@ -53,14 +59,15 @@ const GetterSetter = () => {
 			this.employees.push(name);
 		}
 	}
+
+	// with static Methods you dont have to instantiating a class with keyword "new"
+	// you can call it directly on the class it self
+	const employee1 = Department.createEmployee("Max");
+	console.log(employee1, Department.fiscalYear);
+
 	const accounting = new AccountingDepartment("D2", []);
-	accounting.mostRecentReport = "Hello";
-	accounting.addReport("somethings odd");
-	// mostRecentReports has to be called after a Report was added else a new Errors is thrown
-	console.log(accounting.mostRecentReport);
-	accounting.printReports();
 
 	return <></>;
 };
 
-export default GetterSetter;
+export default Statics;
