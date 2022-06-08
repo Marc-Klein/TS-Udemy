@@ -41,6 +41,20 @@ const FirstClass = () => {
 		}
 	}
 
+	class AccountingDepartment extends Department {
+		constructor(id: string, private reports: string[]) {
+			super(id, "Accounting");
+		}
+
+		addReport(text: string) {
+			this.reports.push(text);
+		}
+
+		printReports() {
+			console.log(this.reports);
+		}
+	}
+
 	const itDepartment = new ITDepartement("d2", ["Max"]);
 
 	// the describe Method calls on accounting an gives us the "name" back
