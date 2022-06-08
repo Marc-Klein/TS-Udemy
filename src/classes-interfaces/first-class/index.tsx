@@ -4,7 +4,9 @@ const FirstClass = () => {
 	class Department {
 		// name: string;
 		// modifier "private" makes sure that nothing else can access employees from outside the class
-		private employees: string[] = [];
+		// instead of "private" before employees we use "protected"
+		// with protected you can use for example employees in every class that extends Departemnent
+		protected employees: string[] = [];
 
 		// constructor runs initalizing code
 		// readonly at this point makes sure that the prop is only initalized ones
@@ -39,6 +41,10 @@ const FirstClass = () => {
 			// you can use the constructor shortcut to bluebrint the class
 			super(id, "IT");
 		}
+
+		addAdmin(text: string) {
+			this.admins.push(text);
+		}
 	}
 
 	class AccountingDepartment extends Department {
@@ -53,17 +59,29 @@ const FirstClass = () => {
 		printReports() {
 			console.log(this.reports);
 		}
+
+		addEmployee(name: string): void {
+			if (name === "Max") return;
+			this.employees.push(name);
+		}
 	}
 
-	const itDepartment = new ITDepartement("d2", ["Max"]);
-
 	// the describe Method calls on accounting an gives us the "name" back
-	const accounting = new Department("D2", "Acounting");
-	console.log(accounting);
-	accounting.addEmployee("Manu");
-	accounting.addEmployee("Max");
-	accounting.describe();
-	accounting.printEmployeeInfo();
+	const someDepartment = new Department("D2", "Acounting");
+	someDepartment.addEmployee("Manu");
+	someDepartment.addEmployee("Max");
+	someDepartment.describe();
+	someDepartment.printEmployeeInfo();
+	console.log(someDepartment);
+
+	// it Departement
+	const itDepartment = new ITDepartement("d2", ["Max"]);
+	itDepartment.addAdmin("Peter");
+	console.log(itDepartment);
+
+	const accounting = new AccountingDepartment("D2", []);
+	accounting.addReport("somethings odd");
+	accounting.printReports();
 
 	return <></>;
 };
