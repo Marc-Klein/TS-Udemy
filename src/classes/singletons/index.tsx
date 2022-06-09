@@ -5,7 +5,7 @@ import React from "react";
 // here with the accounting Department
 // it makes use of private constructors
 
-const GetterSetter = () => {
+const Singletons = () => {
 	class Department {
 		protected employees: string[] = [];
 
@@ -81,4 +81,4 @@ const GetterSetter = () => {
 	return <></>;
 };
 
-export default GetterSetter;
+export default Singletons;

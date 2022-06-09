@@ -4,9 +4,12 @@ import UnionAdd from "@/basics/unionTypes";
 import LiteralAdd from "@/basics/literalTypes";
 import FuncTypes from "@/basics/functionTypes";
 import NeverType from "@/basics/neverType";
-import FirstClass from "@/classes-interfaces/first-class";
-import GetterSetter from "@/classes-interfaces/gettersSetters";
-import Statics from "@/classes-interfaces/staticMethods-props";
+import FirstClass from "@/classes/first-class";
+import GetterSetter from "@/classes/gettersSetters";
+import Statics from "@/classes/staticMethods-props";
+import Singletons from "@/classes/singletons";
+import FirstInterface from "@/interfaces/firstInterface";
+import InterfaceInClass from "@/interfaces/interfacesInClasses";
 
 // note that the NeverType comp throws an Error to showcase the "never" Type
 const Home: NextPage = () => {
@@ -20,6 +23,9 @@ const Home: NextPage = () => {
 			<FirstClass />
 			<GetterSetter />
 			<Statics />
+			<Singletons />
+			<FirstInterface />
+			<InterfaceInClass />
 		</>
 	);
 };
