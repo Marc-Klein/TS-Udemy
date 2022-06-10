@@ -1,6 +1,7 @@
 import React from "react";
 
 const InterfaceInClass = () => {
+	// You can set different Interfaces and extend them with another interface
 	interface Named {
 		readonly name: string;
 	}
@@ -8,6 +9,7 @@ const InterfaceInClass = () => {
 	interface Greetable extends Named {
 		// if we use readonly here we can make the prop readonly sames
 		// as we would use it in the class
+		// you can also extend more and separate them with a comma
 		greet(phrase: string): void;
 	}
 

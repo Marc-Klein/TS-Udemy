@@ -10,6 +10,11 @@ import Statics from "@/classes/staticMethods-props";
 import Singletons from "@/classes/singletons";
 import FirstInterface from "@/interfaces/firstInterface";
 import InterfaceInClass from "@/interfaces/interfacesInClasses";
+import FunctionTypes from "@/interfaces/functionTypes";
+import Optionals from "@/interfaces/optionalParamsProps";
+import Intersection from "@/advancedTypes/intersection";
+import TypeGuards from "@/advancedTypes/typeGuards";
+import DiscriminatedUnions from "@/advancedTypes/discriminatedUnions";
 
 // note that the NeverType comp throws an Error to showcase the "never" Type
 const Home: NextPage = () => {
@@ -26,6 +31,11 @@ const Home: NextPage = () => {
 			<Singletons />
 			<FirstInterface />
 			<InterfaceInClass />
+			<FunctionTypes />
+			<Optionals />
+			<Intersection />
+			<TypeGuards />
+			<DiscriminatedUnions />
 		</>
 	);
 };
