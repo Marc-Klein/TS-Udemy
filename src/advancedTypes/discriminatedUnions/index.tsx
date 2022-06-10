@@ -2,6 +2,7 @@ import React from "react";
 
 const DiscriminatedUnions = () => {
 	// here we have a specialized type in every Interface "bird", "horse"
+
 	interface Bird {
 		type: "bird";
 		flyingSpeed: number;
