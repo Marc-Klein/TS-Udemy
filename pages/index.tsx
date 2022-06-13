@@ -15,7 +15,8 @@ import Optionals from "@/interfaces/optionalParamsProps";
 import Intersection from "@/advancedTypes/intersection";
 import TypeGuards from "@/advancedTypes/typeGuards";
 import DiscriminatedUnions from "@/advancedTypes/discriminatedUnions";
-import Typecasting from "@/typeCasting";
+import Typecasting from "@/advancedTypes/typeCasting";
+import FuncOverload from "@/advancedTypes/funcOverloads";
 
 // note that the NeverType component throws an Error to showcase the "never" Type
 const Home: NextPage = () => {
@@ -38,6 +39,7 @@ const Home: NextPage = () => {
 			<TypeGuards />
 			<DiscriminatedUnions />
 			<Typecasting />
+			<FuncOverload />
 		</>
 	);
 };
