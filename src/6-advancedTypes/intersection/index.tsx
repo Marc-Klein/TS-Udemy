@@ -11,7 +11,7 @@ const Intersection = () => {
 		startDate: Date;
 	};
 
-	// this is also doable with interface]
+	// this is also doable with interface
 	// replace the the "type" with "Interface" and
 	// extend the Intersectioned Interfaces
 	// Interface ElevatedEmployee extends Admin, Employee {}

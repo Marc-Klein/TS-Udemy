@@ -19,6 +19,7 @@ import Typecasting from "@/6-advancedTypes/typeCasting";
 import FuncOverload from "@/6-advancedTypes/funcOverloads";
 import Generics from "@/7-generics/startWithGenerics";
 import Constraints from "@/7-generics/constraints";
+import KeyofConstraints from "@/7-generics/keyofConstraints";
 
 // note that the NeverType component throws an Error to showcase the "never" Type
 const Home: NextPage = () => {
@@ -44,6 +45,7 @@ const Home: NextPage = () => {
 			<FuncOverload />
 			<Generics />
 			<Constraints />
+			<KeyofConstraints />
 		</>
 	);
 };
