@@ -1,22 +1,24 @@
 import type { NextPage } from "next";
-import Add from "@/basics/tsStart/";
-import UnionAdd from "@/basics/unionTypes";
-import LiteralAdd from "@/basics/literalTypes";
-import FuncTypes from "@/basics/functionTypes";
-import NeverType from "@/basics/neverType";
-import FirstClass from "@/classes/first-class";
-import GetterSetter from "@/classes/gettersSetters";
-import Statics from "@/classes/staticMethods-props";
-import Singletons from "@/classes/singletons";
-import FirstInterface from "@/interfaces/firstInterface";
-import InterfaceInClass from "@/interfaces/interfacesInClasses";
-import FunctionTypes from "@/interfaces/functionTypes";
-import Optionals from "@/interfaces/optionalParamsProps";
-import Intersection from "@/advancedTypes/intersection";
-import TypeGuards from "@/advancedTypes/typeGuards";
-import DiscriminatedUnions from "@/advancedTypes/discriminatedUnions";
-import Typecasting from "@/advancedTypes/typeCasting";
-import FuncOverload from "@/advancedTypes/funcOverloads";
+import Add from "@/4-basics/tsStart";
+import UnionAdd from "@/4-basics/unionTypes";
+import LiteralAdd from "@/4-basics/literalTypes";
+import FuncTypes from "@/4-basics/functionTypes";
+import NeverType from "@/4-basics/neverType";
+import FirstClass from "@/5-classes/first-class";
+import GetterSetter from "@/5-classes/gettersSetters";
+import Statics from "@/5-classes/staticMethods-props";
+import Singletons from "@/5-classes/singletons";
+import FirstInterface from "@/5-interfaces/firstInterface";
+import InterfaceInClass from "@/5-interfaces/interfacesInClasses";
+import FunctionTypes from "@/5-interfaces/functionTypes";
+import Optionals from "@/5-interfaces/optionalParamsProps";
+import Intersection from "@/6-advancedTypes/intersection";
+import TypeGuards from "@/6-advancedTypes/typeGuards";
+import DiscriminatedUnions from "@/6-advancedTypes/discriminatedUnions";
+import Typecasting from "@/6-advancedTypes/typeCasting";
+import FuncOverload from "@/6-advancedTypes/funcOverloads";
+import Generics from "@/7-generics/startWithGenerics";
+import Constraints from "@/7-generics/constraints";
 
 // note that the NeverType component throws an Error to showcase the "never" Type
 const Home: NextPage = () => {
@@ -40,6 +42,8 @@ const Home: NextPage = () => {
 			<DiscriminatedUnions />
 			<Typecasting />
 			<FuncOverload />
+			<Generics />
+			<Constraints />
 		</>
 	);
 };
