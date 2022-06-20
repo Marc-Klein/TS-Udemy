@@ -10,17 +10,16 @@ const FirstClass = () => {
 
 		// constructor runs initalizing code
 		// readonly at this point makes sure that the prop is only initalized ones
-		// "protected" makes sure that we  cam use "id" in every class that extends "Department"
+		// "protected" makes sure that we  can use "id" in every class that extends "Department"
 		constructor(protected readonly id: string, public name: string) {
 			// this.name = n;
 		}
 
-		// with describe you define the Method of a Class
-		// the type in this cas points to the class itself
-		// like this it should be clerer where the Method has to look for
+		// the type in this case points to the class itself
+		// like this it should be clearer where the method has to look for
 		// with the "this" Keyword
 		describe(this: Department) {
-			// with this. we look in the class not inside the Methode or globally
+			// with this. we look in the class not inside the Method or globally
 			// console.log("Department:" + this.name);
 			// we can also do it like this
 			console.log(`Department (${this.id}): ${this.name}`);
@@ -40,6 +39,7 @@ const FirstClass = () => {
 		constructor(id: string, public admins: string[]) {
 			// super has to be called before this.
 			// you can use the constructor shortcut to bluebrint the class
+			// super is only permitted in derived classes not in base class itself
 			super(id, "IT");
 		}
 
@@ -78,6 +78,8 @@ const FirstClass = () => {
 	// it Departement
 	const itDepartment = new ITDepartement("d2", ["Max"]);
 	itDepartment.addAdmin("Peter");
+	// since ITDepartement extends Departement we can also access the Methods from Departement
+	itDepartment.addEmployee("Paula");
 	console.log(itDepartment);
 
 	const accounting = new AccountingDepartment("D2", []);

@@ -11,7 +11,7 @@ const Tuples = () => {
 		name: string;
 		age: number;
 		hobbies: string[];
-		role: [number, string];
+		role: [number, string]; //this is a tuple, now we can specify the input
 	} = {
 		name: "Maximilian",
 		age: 30,

@@ -8,6 +8,9 @@ const UnknownTypes = () => {
 	userInput = 5;
 	userInput = "Max";
 
+	// at this point TS knows that the outcome of this if statement
+	// is a string if it matches the conditions
+
 	if (typeof userInput === "string") {
 		userName = userInput;
 	}
