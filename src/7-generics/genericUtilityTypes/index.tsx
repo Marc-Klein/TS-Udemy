@@ -13,9 +13,13 @@ const UtilityTypes = () => {
 		courseGoal.title = title;
 		courseGoal.description = description;
 		courseGoal.completeUntil = date;
-
-		return courseGoal;
+		// weve to typecast "courseGoal" to "CourseGoal" because we cant return "courseGoal", because his type is "Partial CourseGoal"
+		return courseGoal as CourseGoal;
 	};
+
+	// with "readonly" we make sure that we cant push something in the "names" array
+	// const names: Readonly<string[]> = ["Max", "Peter", "Horst"];
+	// names.push("Manu"); TS is complaining because you shouldnt push something in names
 
 	return <></>;
 };

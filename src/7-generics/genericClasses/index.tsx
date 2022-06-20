@@ -1,4 +1,5 @@
 import { type } from "os";
+import { stringify } from "querystring";
 import React from "react";
 
 const GenericClasses = () => {
@@ -29,13 +30,13 @@ const GenericClasses = () => {
 	}
 
 	// its also possible to use Uniontypes
-	const textStorage = new DataStorage();
+	const textStorage = new DataStorage<string>();
 	textStorage.addItem("Max");
-	textStorage.addItem("Peter");
+	textStorage.addItem("Manu");
 	textStorage.removeItem("Peter");
 	console.log(textStorage.getItem());
 
-	const numberStorage = new DataStorage();
+	const numberStorage = new DataStorage<number>();
 	numberStorage.addItem(2);
 	console.log(numberStorage.getItem());
 

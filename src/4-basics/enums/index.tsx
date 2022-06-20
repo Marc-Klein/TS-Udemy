@@ -23,6 +23,7 @@ const Enums = () => {
 	// const READ_ONLY = 1;
 	// const AUTHOR = 2;
 
+	// enum will
 	enum Role {
 		ADMIN = "ADMIN",
 		READ_ONLY = 100,
