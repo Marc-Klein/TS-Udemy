@@ -5,7 +5,7 @@ const FuncOverload = () => {
 	type Numeric = number | boolean;
 	type Universal = Numeric & Combineable;
 
-	// ocerloading means, that weve to make function suitable for a special case
+	// overloading means, that weve to make function suitable for a special case
 	// as here we need to specify number to use string methods
 	// Its only possible to overload function with a type that is declared before
 	// we cant assign a new type in the overloaded function that isnt declared
@@ -18,9 +18,9 @@ const FuncOverload = () => {
 		return a + b;
 	}
 
-	// we could typecase this to a string but this isnt optimal
+	// we could typecast this to a string but this isnt optimal
 	// we cant run string Operations on the result because "Combineable" is a union Type "string|number"
-	// no we cann cal add an TS is matching the correct output to the input
+	// now we cann call add an TS is matching the correct output to the input
 	const resultString = add("mad", "max");
 	const resultNumber = add(1, 2);
 	console.log(resultString);

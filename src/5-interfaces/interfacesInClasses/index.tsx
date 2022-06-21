@@ -7,7 +7,7 @@ const InterfaceInClass = () => {
 	}
 
 	interface Greetable extends Named {
-		// if we use readonly here we can make the prop readonly sames
+		// if we use readonly here we can make the prop readonly same
 		// as we would use it in the class
 		// you can also extend more and separate them with a comma
 		greet(phrase: string): void;

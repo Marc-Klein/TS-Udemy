@@ -3,6 +3,8 @@ import React from "react";
 // https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#defining-a-union-type
 
 const UnionAdd = () => {
+	// union Types can either be two or more types
+	// here we can input a number or a string
 	const combine = (input1: number | string, input2: number | string) => {
 		let result;
 		// workaround for TS checking for the types of the arr

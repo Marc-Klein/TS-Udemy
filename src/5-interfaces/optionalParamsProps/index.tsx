@@ -2,6 +2,8 @@ import React from "react";
 
 const Optionals = () => {
 	interface Optionals {
+		// The ? makes a value in the interface optional,
+		// means we dont have to use them but we can
 		readonly name?: string;
 		age?: number;
 		outputName?: string;
