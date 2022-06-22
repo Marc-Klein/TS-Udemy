@@ -19,6 +19,7 @@
     "baseUrl": ".",
     "sourceMap": true,
     "jsx": "preserve",
+    "experimentalDecorators": true,
     "paths": {
       "@/*": ["src/*"]
     },

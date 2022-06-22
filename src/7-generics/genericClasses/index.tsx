@@ -17,7 +17,7 @@ const GenericClasses = () => {
 
 		removeItem(item: T) {
 			// this if statement elimantes the normal JavaScript behaviour, that if it cant
-			// find soemthing, it returns nothing instead of the last char of the array "-1"
+			// find something, it returns nothing instead of the last char of the array "-1"
 			if (this.data.indexOf(item) === -1) {
 				return;
 			}

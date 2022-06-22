@@ -11,7 +11,7 @@ const Constraints = () => {
 	const mergedObjects = merge(target, source);
 	console.log(mergedObjects);
 
-	// with an interface instead of an string, we make the function mor flexible
+	// with an interface instead of an string, we make the function more flexible
 	interface Lengthy {
 		length: number;
 	}
