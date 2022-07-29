@@ -53,7 +53,7 @@ const PropDecorators = () => {
 		}
 
 		@Log3
-		getPriceWithTax(@Log4 tax: number) {
+		getPriceWithTax(tax: number) {
 			return this._price * (1 + tax);
 		}
 	}

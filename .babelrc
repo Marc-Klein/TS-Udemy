@@ -9,7 +9,12 @@
         "labelFormat": "[local]",
         "cssPropOptimization": false
       }
-    ]
+    ],
+    /*
+    TODO: 
+    - error while compiling because of decorators
+    */
+    ["@babel/plugin-proposal-decorators", { "legacy": true }]
   ],
   "env": {
     "production": {

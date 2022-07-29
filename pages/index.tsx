@@ -22,6 +22,7 @@ import Constraints from "@/7-generics/constraints";
 import KeyofConstraints from "@/7-generics/keyofConstraints";
 import GenericClasses from "@/7-generics/genericClasses";
 import PropDecorators from "@/8-Decorators/propDecorator";
+import AutoBindDecorator from "@/8-Decorators/autobindDecorator";
 
 // note that the NeverType component throws an Error to showcase the "never" Type
 const Home: NextPage = () => {
@@ -50,6 +51,7 @@ const Home: NextPage = () => {
 			<KeyofConstraints />
 			<GenericClasses />
 			<PropDecorators />
+			<AutoBindDecorator />
 		</>
 	);
 };
